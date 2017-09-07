@@ -6,11 +6,12 @@ const Card = (props) => {
     return (<div>Loading...</div>);
   }
 
-  const valueList = props.items.map((item) => {
+  const valueList = props.items.filter(
+    (item) => !item.name.includes("ID")
+  )
+  .map((item) => {
     return (
-      <li key={item.name}>
-          <CardItem name={item.name} value={item.value}/>
-      </li>
+      <CardItem name={item.name} value={item.value}/>
     );
   });
 
