@@ -3,8 +3,7 @@ import React,{Component} from 'react';
 
 export default class CardItem extends Component{
     constructor(props){
-        super(props);
-        
+        super(props);        
     }
 
     render(){
