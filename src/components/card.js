@@ -8,16 +8,14 @@ const Card = (props) => {
 
   const valueList = props.items.map((item) => {
     return (
-      <li key={item.name}>
-          <CardItem name={item.name} value={item.value}/>
-      </li>
+      <CardItem key={item.name} name={item.name} value={item.value}/>
     );
   });
 
   return (
     <div className='card'>
         <h4>{props.title}</h4>
-        <ul>
+        <ul className="unorderdList">
           { valueList }
         </ul>
     </div>
