@@ -1,0 +1,9 @@
+#container{width:100%;}
+#left{float:left;width:100px;}
+#right{float:right;width:100px;}
+#center{margin:0 auto;width:200px;}
+
+.left-panel{
+    border: 5px border-style solid;
+    background-color: yellow;
+}

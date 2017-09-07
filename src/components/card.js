@@ -11,12 +11,12 @@ const Card = (props) => {
   )
   .map((item) => {
     return (
-      <CardItem name={item.name} value={item.value}/>
+      <CardItem key={item.name} name={item.name} value={item.value}/>
     );
   });
 
   return (
-    <div className='card'>
+    <div >
         <h4>{props.title}</h4>
         <ul>
           { valueList }

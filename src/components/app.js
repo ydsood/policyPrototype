@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import SearchBar from './searchbar'
+import SearchBar from './searchbar';
+import PolicyMainPanel from './policy/policy_main_panel';
 
 export default class App extends Component {
   render() {
@@ -7,6 +8,7 @@ export default class App extends Component {
       <div>
         React simple starter
         <SearchBar />
+        <PolicyMainPanel />
       </div>
     );
   }
