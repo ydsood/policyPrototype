@@ -1,10 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {connect} from 'redux';
 import SearchResult from './search_result';
 
-const ResultList = (props)=>{
-    return(
-        <div>Result List</div>
-    );
+class ResultList extends Component{
+    
+    constructor(props={policies:[]}){
+        super(props);
+        this.state = {policies : props.policies};
+    }
+
+    render(){
+        //console.log(props);
+        let policyList = this.state.policies.map((item)=>{
+            console.log(item);
+            return <SearchResult data={item} />
+        });
+        console.log(policyList);
+        return(
+            <div className="result-list">
+                <ul className="unorderedList">
+                    {policyList}
+                </ul>
+            </div>
+        );
+    }
+
 }
 
-export default ResultList;
+function mapStateToProps(state){
+    return {policies : state.policies};
+}
+
+export default connect()(ResultList);

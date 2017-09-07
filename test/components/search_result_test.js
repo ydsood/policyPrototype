@@ -6,24 +6,25 @@ describe('Search Result Component', ()=>{
 
     beforeEach(()=>{
         const props = {
-            _Self : "/resources/Policy/Conv_WL_Values_TC01",
-            policyNumber : "Conv_WL_Values_TC01",
-            name : "Jimmy  Myi_Conv",
-            status : "Active",
-            issueAge : 65,
-            dateOfBirth : "1947-01-07T00:00:00",
-            governmentId : "414287567",
-            lineOfBusiness : "Traditional Life",
-            applicationReceivedDate : "1900-01-01T00:00:00"
-        }
+            data : {
+                _Self : "/resources/Policy/Conv_WL_Values_TC01",
+                policyNumber : "Conv_WL_Values_TC01",
+                name : "Jimmy  Myi_Conv",
+                status : "Active",
+                issueAge : 65,
+                dateOfBirth : "1947-01-07T00:00:00",
+                governmentId : "414287567",
+                lineOfBusiness : "Traditional Life",
+                applicationReceivedDate : "1900-01-01T00:00:00"
+            }
+        };
         component = renderComponent(SearchResult, props);
     });
 
     it('is rendered', ()=>{
-        console.log(component);
         expect(component).to.exist;
     });
-
+    
     it('renders all properties',()=>{
         expect(component.find('li')).to.have.length(9);
     });
@@ -31,6 +32,27 @@ describe('Search Result Component', ()=>{
     describe('has line items', ()=>{
         it('has policy number', () => {
             expect(component.find('ul')).to.contain('policyNumber');
+        });
+        it('has name', () => {
+            expect(component.find('ul')).to.contain('name');
+        });
+        it('has status', () => {
+            expect(component.find('ul')).to.contain('status');
+        });
+        it('has issueAge', () => {
+            expect(component.find('ul')).to.contain('issueAge');
+        });
+        it('has dateOfBirth', () => {
+            expect(component.find('ul')).to.contain('dateOfBirth');
+        });
+        it('has governmentId', () => {
+            expect(component.find('ul')).to.contain('governmentId');
+        });
+        it('has lineOfBusiness', () => {
+            expect(component.find('ul')).to.contain('lineOfBusiness');
+        });
+        it('has applicationReceivedDate', () => {
+            expect(component.find('ul')).to.contain('applicationReceivedDate');
         });
     });
 });
