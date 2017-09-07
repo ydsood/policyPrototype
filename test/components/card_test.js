@@ -14,5 +14,13 @@ describe('Card Component', () => {
 
     it('should render', () => {
         expect(component).to.exist;
-    })
+    });
+
+    it('should have class', () => {
+        expect(component).to.have.class('card');
+    });
+
+    it('should have title', () => {
+        expect(component.find('h4')).to.have.text('Foo');
+    });
 });
