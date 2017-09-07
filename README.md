@@ -1,1 +1,1 @@
-# policyPrototype
+FAST prototype for the Policy page. This uses stephe grider's redux simple starter as a starting point and is developed using the React-Redux libarary.
