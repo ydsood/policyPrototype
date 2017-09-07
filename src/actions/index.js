@@ -5,7 +5,7 @@ export const FETCH_POLICY = 'fetch_policy';
 
 const ROOT_URL = 'https://pd.dev.fasttechnology.com/PD1Dev1rs';
 
-export function fetchPolicies() {
+export function fetchPolicies(callback) {
     const request = axios.get(`${ROOT_URL}/resources/Policy`, {
         auth: {
             username: 'KCMiller',
@@ -14,7 +14,7 @@ export function fetchPolicies() {
         params: {
             limit: 8
         }
-    });
+    }).then(callback);
     return {
         type: FETCH_POLICIES,
         payload: request
