@@ -6,7 +6,7 @@ import {Tab, Tabs} from 'react-bootstrap';
 const PolicyMiddlePanel = (props) =>{
     const tabsData = props.data.tabs;
     const tabItems = props.data.items;
-    console.log(tabsData);
+    //console.log(tabsData);
     const tabs = tabsData.map(tab=>{
         return (
             <Tab key={tab.name} eventKey={tab.name} title={tab.name}>
@@ -14,7 +14,7 @@ const PolicyMiddlePanel = (props) =>{
             </Tab>
         )
     });
-    console.log(tabs);
+    //console.log(tabs);
     return(
         <Tabs defaultActiveKey={tabs[0].name} animation={false} id="noanim-tab">
             {tabs}

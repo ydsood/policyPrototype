@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {connect} from 'redux';
+import {connect} from 'react-redux';
 import SearchResult from './search_result';
 
 class ResultList extends Component{
@@ -15,7 +15,7 @@ class ResultList extends Component{
             console.log(item);
             return <SearchResult data={item} />
         });
-        console.log(policyList);
+        //console.log(policyList);
         return(
             <div className="result-list">
                 <ul className="unorderedList">
@@ -31,4 +31,4 @@ function mapStateToProps(state){
     return {policies : state.policies};
 }
 
-export default connect()(ResultList);
+export default connect(mapStateToProps)(ResultList);
