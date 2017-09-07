@@ -32,8 +32,5 @@ function mapStateToProps(state){
     return {policies : state.policies};
 }
 
-<<<<<<< HEAD
+
 export default connect(mapStateToProps, {})(ResultList);
-=======
-export default connect(mapStateToProps, {})(ResultList);
->>>>>>> f4e0def27446c5c683cfec505b1b9e01101fdec0
