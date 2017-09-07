@@ -18,7 +18,7 @@ const Card = (props) => {
   return (
     <div >
         <h4>{props.title}</h4>
-        <ul>
+        <ul className="unorderdList">
           { valueList }
         </ul>
     </div>
