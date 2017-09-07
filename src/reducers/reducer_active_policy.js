@@ -1,8 +1,8 @@
-import FETCH_POLICIES from '../actions';
+import FETCH_POLICY from '../actions';
 
 export default function(state = {}, action) {
     switch (action.type) {
-      case FETCH_POLICIES:
+      case FETCH_POLICY:
         return action.payload;
       default:
         return state

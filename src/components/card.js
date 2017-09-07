@@ -16,7 +16,7 @@ const Card = (props) => {
   });
 
   return (
-    <div className='card'>
+    <div >
         <h4>{props.title}</h4>
         <ul className="unorderdList">
           { valueList }
