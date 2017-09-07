@@ -1,15 +1,19 @@
 import React from 'react';
 import Card from './card';
 
-const SearchResult = (props)=>{
-    console.log(props);
-    const items = Object.keys(props).map((key)=>{
-        return {name : key, value: props[key]};
+const SearchResult = (props)=>{    
+    const items = Object.keys(props.data).map((key)=>{
+        return {name : key, value: props.data[key]};
     });
-    
-    return (
-        <Card title={props.policyNumber} items ={items}/>
-    );
+    console.log(items);
+    if(!props.data || !props.data.policyNumber)
+        return (
+            <Card title="Policy Number" items ={items}/>
+        );
+    else 
+        return (      
+            <Card title={props.data.policyNumber} items ={items}/>
+        );
 }
 
 export default SearchResult;
