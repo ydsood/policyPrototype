@@ -1,15 +1,16 @@
 import React,{Component} from 'react';
 
 
-export default class CardItem extends Component{
-    constructor(props){
-        super(props);
-        
+const CardItem = (props) =>{
+    if(props === null || props === undefined){
+        return (<li>nothing</li>);
     }
-
-    render(){
-        return(
-            <li><span>{this.state.name}</span> {this.state.value}</li>
-        )
-    }
+    //console.log(props);
+    const name = props.name;
+    const value = props.value;
+    return(
+        <li key={name}>{name}:{value}</li>
+    );
 }
+
+export default CardItem;
