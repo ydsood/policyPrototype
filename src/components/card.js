@@ -40,7 +40,20 @@ class Card extends Component {
           </ul>
       </div>
     );
+<<<<<<< HEAD
   }
+=======
+  });
+
+  return (
+    <div className="card">
+        <h4>{props.title}</h4>
+        <ul className="unorderdList">
+          { valueList }
+        </ul>
+    </div>
+  );
+>>>>>>> 6b8e34c314d0c106653246571481f019c9345ed3
 }
 
 export default connect(null, { fetchPolicy })(Card);

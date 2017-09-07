@@ -15,7 +15,7 @@ class ResultList extends Component{
             console.log(item);
             return <SearchResult data={item} />
         });
-        console.log(policyList);
+        //console.log(policyList);
         return(
             <div className="result-list">
                 <ul className="unorderedList">
@@ -31,4 +31,8 @@ function mapStateToProps(state){
     return {policies : state.policies};
 }
 
+<<<<<<< HEAD
 export default connect(mapStateToProps, {})(ResultList);
+=======
+export default connect(mapStateToProps)(ResultList);
+>>>>>>> 6b8e34c314d0c106653246571481f019c9345ed3
