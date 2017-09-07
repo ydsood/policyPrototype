@@ -12,7 +12,7 @@ const SearchResult = (props)=>{
         );
     else 
         return (      
-            <Card title={props.data.policyNumber} items ={items}/>
+            <Card title={props.data.policyNumber} items ={items} isSearchResult={true}/>
         );
 }
 
