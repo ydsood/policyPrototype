@@ -11,7 +11,6 @@ class Card extends Component {
       policyNumber: props.title
     }
   }
-
   handleSelect() {
     if (!this.state.isSearchResult) return;
 
