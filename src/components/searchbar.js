@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { fetchPolicies } from '../actions';
-import { Button, FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, InputGroup } from 'react-bootstrap';
 
 class SearchBar extends Component {
     constructor(props) {
