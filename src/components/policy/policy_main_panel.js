@@ -54,23 +54,31 @@ const PolicyMainPanel = (props) =>{
 
 function mapStateToProps(state){
     //Whatever is returned will show up as props inside of BookList
-    return{
-        activePolicy:{
-            "owner":{
-                "FullName":"William Shakespeare","BirthDate":"1960-06-06","Gender":"Male"
-            },
-            "mailingAddress":{"AddressType":"Home"},
-            "policyCashValues":{"total":1532.25,"faceAmount":126321,"grossSurrenderCharge":158332},
-            "tabs":{
-                "Coverages":"/resources/Policy/NBA_Deferred1/Coverages",
-                "Transactions": "/resources/Policy/NBA_Deferred1/Transactions",
-                "Roles": "/resources/Policy/NBA_Deferred1/Roles",
-                "Notes": "/resources/Policy/NBA_Deferred1/Notes",
-                "Commissions": "/resources/Policy/NBA_Deferred1/Commissions",
-                "PolicyAddress": "/resources/Policy/NBA_Deferred1/PolicyAddress"
+    if(Object.keys(state.activePolicy).length === 0){
+       
+        return{
+            activePolicy:{
+                "owner":{
+                    "FullName":"William Shakespeare","BirthDate":"1960-06-06","Gender":"Male"
+                },
+                "mailingAddress":{"AddressType":"Home"},
+                "policyCashValues":{"total":1532.25,"faceAmount":126321,"grossSurrenderCharge":158332},
+                "tabs":{
+                    "Coverages":"/resources/Policy/NBA_Deferred1/Coverages",
+                    "Transactions": "/resources/Policy/NBA_Deferred1/Transactions",
+                    "Roles": "/resources/Policy/NBA_Deferred1/Roles",
+                    "Notes": "/resources/Policy/NBA_Deferred1/Notes",
+                    "Commissions": "/resources/Policy/NBA_Deferred1/Commissions",
+                    "PolicyAddress": "/resources/Policy/NBA_Deferred1/PolicyAddress"
+                }
             }
-        }
+        };
+    }
+    console.log(state.activePolicy);
+    return{
+        activePolicy:state.activePolicy
     };
+    
 }
 
 export default connect(mapStateToProps)(PolicyMainPanel);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardItem from './card_item';
-import fetchPolicy from '../actions';
+import {fetchPolicy} from '../actions';
 import { connect } from 'react-redux';
 
 class Card extends Component {
@@ -42,4 +42,4 @@ class Card extends Component {
   }
 }
 
-export default connect(null, { fetchPolicy })(Card);
+export default connect(null,  {fetchPolicy} )(Card);
