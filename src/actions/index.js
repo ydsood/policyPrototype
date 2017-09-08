@@ -16,7 +16,7 @@ export function fetchPolicies(policyNumber, callback) {
             limit: 8,
             policyNumber: policyNumber
         }
-    }).then(callback);
+    });
     return {
         type: FETCH_POLICIES,
         payload: request
