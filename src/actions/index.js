@@ -7,15 +7,16 @@ const ROOT_URL = 'https://pd.dev.fasttechnology.com/PD1Dev1rs';
 
 export function fetchPolicies(policyNumber, callback) {
     const limit = 8;
+    let params = { limit };
+    if (policyNumber) {
+        params.policyNumber = policyNumber;
+    }
     const request = axios.get(`${ROOT_URL}/resources/Policy`, {
         auth: {
             username: 'KCMiller',
             password: 'S123456'
         },
-        params: {
-            limit: 8,
-            policyNumber: policyNumber
-        }
+        params
     }).then((value) =>  {
         callback();
         return value;
