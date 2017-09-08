@@ -69,7 +69,7 @@ class ResultList extends Component{
         //console.log(policyList);
         return(
             <div className="result-list">
-                <Nav bsStyle="tabs" stacked>
+                <Nav bsStyle="pills" stacked>
                     {policyList}
                 </Nav>
             </div>

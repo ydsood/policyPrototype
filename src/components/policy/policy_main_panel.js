@@ -57,7 +57,7 @@ function mapStateToProps(state){
     return{
         activePolicy:{
             "owner":{
-                "FullName":"hahaha","BirthDate":"1960-06-06","Gender":"Male"
+                "FullName":"William Shakespeare","BirthDate":"1960-06-06","Gender":"Male"
             },
             "mailingAddress":{"AddressType":"Home"},
             "policyCashValues":{"total":1532.25,"faceAmount":126321,"grossSurrenderCharge":158332},

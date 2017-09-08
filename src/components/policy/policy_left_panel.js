@@ -8,7 +8,9 @@ const PolicyLeftPanel = (props) =>{
     });
     return(
         <div className="left-panel">
-            {list}
+            <ul className="unorderdList">
+                {list}
+            </ul>
         </div>
     )
 }

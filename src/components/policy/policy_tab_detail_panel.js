@@ -9,7 +9,9 @@ const PolicyTabDetailPanel = (props) =>{
     return(
         <div className="left-panel">
             <h4>{props.name}</h4>
-            {list}
+            <ul className="unorderdList">
+                {list}
+            </ul>
         </div>
     )
 }
