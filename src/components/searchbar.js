@@ -16,7 +16,6 @@ class SearchBar extends Component {
         e.preventDefault();
         //this.setState({ isLoading: true });
         const callback = () => {
-            console.log("done");
             this.setState({ isLoading: false });
         };  
         

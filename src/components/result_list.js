@@ -7,10 +7,10 @@ import {Nav, NavItem} from 'react-bootstrap';
 class ResultList extends Component{
     
     constructor(props={policies:[]}){
-        console.log(props);
+        //console.log(props);
         super(props);
         this.state = {policies : props.policies};
-        console.log(this.state);
+        //console.log(this.state);
     }
 
     render(){
@@ -79,7 +79,7 @@ class ResultList extends Component{
 }
 
 function mapStateToProps(state){
-    console.log(`here --> ${state}`);
+    //console.log(`here --> ${state}`);
     return {policies : state.policies};
 }
 
