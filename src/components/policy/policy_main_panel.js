@@ -11,7 +11,7 @@ const PolicyMainPanel = (props) =>{
   
     const middleItems = Object.keys(props.activePolicy)
     .filter((item)=>{
-       return middleItemFilter.includes(item)
+       return (middleItemFilter.includes(item) && props.activePolicy[item] != null)
     })
     .map((item)=>{
         return{
@@ -28,7 +28,7 @@ const PolicyMainPanel = (props) =>{
     });
     const leftItems = Object.keys(props.activePolicy)
     .filter((item)=>{
-        return leftItemFilter.includes(item)
+        return (leftItemFilter.includes(item) && props.activePolicy[item] != null)
     })
     .map((item)=>{
         return{
