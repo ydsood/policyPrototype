@@ -8,11 +8,16 @@ const SearchResult = (props)=>{
     //console.log(items);
     if(!props.data || !props.data.policyNumber)
         return (
-            <Card title="Policy Number" items ={items}/>
+            <div className="search-result"> 
+                <Card title="Policy Number" items ={items}/>
+            </div>
+            
         );
     else 
-        return (      
-            <Card title={props.data.policyNumber} items ={items} isSearchResult={true}/>
+        return (
+            <div className="search-result">       
+                <Card title={props.data.policyNumber} items ={items} isSearchResult={true}/>
+            </div>
         );
 }
 
