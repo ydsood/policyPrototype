@@ -33,7 +33,7 @@ class Card extends Component {
     });
 
     return (
-      <div onClick={ this.handleSelect.bind(this) }>
+      <div className = "card" onClick={ this.handleSelect.bind(this)}>
           <h4>{this.props.title}</h4>
           <ul className="unorderdList">
             { valueList }
