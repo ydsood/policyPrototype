@@ -15,17 +15,19 @@ const PolicyMainPanel = (props) =>{
     })
     .map((item)=>{
         return{
-            tabs:Object.keys(props.activePolicy["tabs"]).map((key)=>{
-                return {name:key,value:props.activePolicy["tabs"][key]}
-            }),
-            items:[{
-                title:item,
-                items:Object.keys(props.activePolicy[item]).map((key)=>{
-                    return {name : key, value: props.activePolicy[item][key]};
-                })
-            }]
+            title:item,
+            items:Object.keys(props.activePolicy[item]).map((key)=>{
+                return {name : key, value: props.activePolicy[item][key]};
+            })
         }
     });
+
+    const middleData = {
+        items:middleItems,
+        tabs:Object.keys(props.activePolicy["tabs"]).map((key)=>{
+            return {name:key,value:props.activePolicy["tabs"][key]}
+        })
+    }
     const leftItems = Object.keys(props.activePolicy)
     .filter((item)=>{
         return (leftItemFilter.includes(item) && props.activePolicy[item] != null)
@@ -43,7 +45,7 @@ const PolicyMainPanel = (props) =>{
     <div className = "policy-main-panel">
         <Row className="show-grid">
             <Col xs={6} md={4}><PolicyLeftPanel items={leftItems}/></Col>
-            <Col xs={12} md={8}><PolicyMiddlePanel data={middleItems} /></Col>
+            <Col xs={12} md={8}><PolicyMiddlePanel data={middleData} /></Col>
             
         </Row>
     </div>
@@ -63,6 +65,7 @@ function mapStateToProps(state){
                 },
                 "mailingAddress":{"AddressType":"Home"},
                 "policyCashValues":{"total":1532.25,"faceAmount":126321,"grossSurrenderCharge":158332},
+                "policyBenefitValues":{"total1":142.25,"faceAmount1":12521,"grossSurrenderCharge":15632},
                 "tabs":{
                     "Coverages":"/resources/Policy/NBA_Deferred1/Coverages",
                     "Transactions": "/resources/Policy/NBA_Deferred1/Transactions",

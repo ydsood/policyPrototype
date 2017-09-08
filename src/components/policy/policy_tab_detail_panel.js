@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../card';
+import {Row, Col} from 'react-bootstrap';
 
 
 const PolicyTabDetailPanel = (props) =>{
