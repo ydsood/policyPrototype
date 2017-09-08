@@ -14,7 +14,7 @@ class SearchBar extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        //this.setState({ isLoading: true });
+        this.setState({ isLoading: true });
         const callback = () => {
             this.setState({ isLoading: false });
         };  
