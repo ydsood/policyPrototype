@@ -4,6 +4,11 @@ export const FETCH_POLICIES = 'fetch_policies';
 export const FETCH_POLICY = 'fetch_policy';
 
 const ROOT_URL = 'https://pd.dev.fasttechnology.com/PD1Dev1rs';
+const auth = {
+    username: 'KCMiller',
+    password: 'S123456'
+};
+
 
 export function fetchPolicies(policyNumber, callback) {
     const limit = 8;
@@ -12,10 +17,7 @@ export function fetchPolicies(policyNumber, callback) {
         params.policyNumber = policyNumber;
     }
     const request = axios.get(`${ROOT_URL}/resources/Policy`, {
-        auth: {
-            username: 'KCMiller',
-            password: 'S123456'
-        },
+        auth,
         params
     }).then((value) =>  {
         callback();
@@ -29,10 +31,7 @@ export function fetchPolicies(policyNumber, callback) {
 
 export function fetchPolicy(policyNumber) {
     const request = axios.get(`${ROOT_URL}/resources/Policy/${policyNumber}`, {
-        auth: {
-            username: 'KCMiller',
-            password: 'S123456'
-        }
+        auth
     });
     return {
         type: FETCH_POLICY,
