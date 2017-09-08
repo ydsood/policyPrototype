@@ -15,5 +15,6 @@
     list-style-type: none
 }
 .searchbar {
-    margin: auto
+    margin: auto;
+    padding-top: 10px;
 }
