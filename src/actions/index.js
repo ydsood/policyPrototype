@@ -19,7 +19,8 @@ export function fetchPolicies(policyNumber, callback) {
     });
     return {
         type: FETCH_POLICIES,
-        payload: request
+        payload: request,
+        callback: callback
     }
 }
 
