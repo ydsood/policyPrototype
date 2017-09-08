@@ -26,7 +26,7 @@ describe('Search Result Component', ()=>{
     });
     
     it('renders all properties',()=>{
-        expect(component.find('li')).to.have.length(9);
+        expect(component.find('li')).to.have.length(3);
     });
 
     describe('has line items', ()=>{
@@ -39,7 +39,7 @@ describe('Search Result Component', ()=>{
         it('has status', () => {
             expect(component.find('ul')).to.contain('status');
         });
-        it('has issueAge', () => {
+        /*it('has issueAge', () => {
             expect(component.find('ul')).to.contain('issueAge');
         });
         it('has dateOfBirth', () => {
@@ -53,6 +53,6 @@ describe('Search Result Component', ()=>{
         });
         it('has applicationReceivedDate', () => {
             expect(component.find('ul')).to.contain('applicationReceivedDate');
-        });
+        });*/
     });
 });

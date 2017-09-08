@@ -9,7 +9,7 @@ const CardItem = (props) =>{
     const name = props.name;
     const value = props.value;
     return(
-        <li key={name}>{name}:{value}</li>
+        <li key={name}><b>{name}</b>:{value}</li>
     );
 }
 

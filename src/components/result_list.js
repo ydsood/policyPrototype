@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import SearchResult from './search_result';
 import { fetchPolicies } from '../actions';
+import {Nav, NavItem} from 'react-bootstrap';
 
 class ResultList extends Component{
     
@@ -13,6 +14,7 @@ class ResultList extends Component{
     }
 
     render(){
+        //console.log(this.props);
         const policies = [
             {
                 _Self : "/resources/Policy/Conv_WL_Values_TC01",
@@ -52,7 +54,11 @@ class ResultList extends Component{
         if(!this.props.policies || this.props.policies.length == 0 )
             policyList = policies.map((item)=>{
                 //console.log(item);
-                return <SearchResult data={item} />
+                return(
+                         <NavItem title={item.policyNumber}>
+                            <SearchResult key={item.policyNumber} data={item} />
+                        </NavItem>
+                );
             });
         //console.log(this.props);
        else
@@ -63,9 +69,9 @@ class ResultList extends Component{
         //console.log(policyList);
         return(
             <div className="result-list">
-                <ul className="unorderedList">
+                <Nav bsStyle="tabs" stacked>
                     {policyList}
-                </ul>
+                </Nav>
             </div>
         );
     }
@@ -73,6 +79,7 @@ class ResultList extends Component{
 }
 
 function mapStateToProps(state){
+    console.log(`here --> ${state}`);
     return {policies : state.policies};
 }
 
