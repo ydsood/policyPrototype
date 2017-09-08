@@ -1,8 +1,12 @@
 import React,{Component} from 'react';
 import PolicyLeftPanel from './policy_left_panel';
 import PolicyMiddlePanel from './policy_middle_panel';
+<<<<<<< HEAD
 import {Grid,Row,Col} from 'react-bootstrap';
 import {connect} from 'react-redux';
+=======
+import {Grid,Row,Col, Clearfix} from 'react-bootstrap';
+>>>>>>> 4057f245d62ab995bd55f46597a966e7bc38720c
 
 
 const PolicyMainPanel = (props) =>{
@@ -40,12 +44,15 @@ const PolicyMainPanel = (props) =>{
     });
 
     return(
+    <div className = "policy-main-panel">
         <Grid>
             <Row className="show-grid">
                 <Col xs={6} md={4}><PolicyLeftPanel items={leftItems}/></Col>
                 <Col xs={12} md={8}><PolicyMiddlePanel data={middleItems} /></Col>
+                <Clearfix mdVisibleBlock></Clearfix>
             </Row>
-      </Grid>
+        </Grid>
+    </div>
     )
 }
 
