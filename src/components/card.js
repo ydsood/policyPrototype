@@ -5,9 +5,8 @@ const Card = (props) => {
   if (!props || props === undefined || props === {}) {
     return (<div>Loading...</div>);
   }
-
   const valueList = props.items.filter(
-    (item) => !item.name.includes("ID")
+    (item) => {return !item.name.includes("ID")}
   )
   .map((item) => {
     return (

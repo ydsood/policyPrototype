@@ -10,7 +10,6 @@ class ResultList extends Component{
     }
 
     render(){
-        //console.log(props);
         let policyList = this.state.policies.map((item)=>{
             console.log(item);
             return <SearchResult data={item} />
