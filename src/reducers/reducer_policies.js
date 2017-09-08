@@ -1,4 +1,4 @@
-import FETCH_POLICIES from '../actions';
+import {FETCH_POLICIES} from '../actions';
 
 export default function(state = [], action) {
     switch (action.type) {

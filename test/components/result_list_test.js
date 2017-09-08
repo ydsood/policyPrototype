@@ -6,7 +6,7 @@ describe('Result List', () => {
     let component;    
 
     beforeEach(()=>{
-        const props = {
+        const state = {
                 policies : [
                     {
                         _Self : "/resources/Policy/Conv_WL_Values_TC01",
@@ -43,7 +43,7 @@ describe('Result List', () => {
                     }
                 ]
             };
-        component = renderComponent(ResultList, props, undefined);
+        component = renderComponent(ResultList, null, state);
     });
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardItem from './card_item';
-import fetchPolicy from '../actions';
+import {fetchPolicy} from '../actions';
 import { connect } from 'react-redux';
 
 class Card extends Component {
@@ -11,7 +11,6 @@ class Card extends Component {
       policyNumber: props.title
     }
   }
-
   handleSelect() {
     if (!this.state.isSearchResult) return;
 
@@ -33,7 +32,7 @@ class Card extends Component {
     });
 
     return (
-      <div onClick={ this.handleSelect.bind(this) }>
+      <div className = "card" onClick={ this.handleSelect.bind(this)}>
           <h4>{this.props.title}</h4>
           <ul className="unorderdList">
             { valueList }
@@ -43,4 +42,4 @@ class Card extends Component {
   }
 }
 
-export default connect(null, { fetchPolicy })(Card);
+export default connect(null,  {fetchPolicy} )(Card);
