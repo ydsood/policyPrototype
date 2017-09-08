@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardItem from './card_item';
 import {fetchPolicy} from '../actions';
 import { connect } from 'react-redux';
+import { Thumbnail } from 'react-bootstrap';
 
 class Card extends Component {
   constructor(props) {
@@ -33,10 +34,12 @@ class Card extends Component {
 
     return (
       <div className = "card" onClick={ this.handleSelect.bind(this)}>
+        <Thumbnail>
           <h4>{this.props.title}</h4>
           <ul className="unorderdList">
             { valueList }
           </ul>
+        </Thumbnail>
       </div>
     );
   }
