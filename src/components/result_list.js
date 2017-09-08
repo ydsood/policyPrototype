@@ -13,13 +13,6 @@ class ResultList extends Component{
     }
 
     render(){
-<<<<<<< HEAD
-        let policyList = this.state.policies.map((item)=>{
-            console.log(item);
-            return <SearchResult data={item} />
-        });
-        console.log(policyList);
-=======
         const policies = [
             {
                 _Self : "/resources/Policy/Conv_WL_Values_TC01",
@@ -68,7 +61,6 @@ class ResultList extends Component{
                 return <SearchResult data={item} />
             });
         //console.log(policyList);
->>>>>>> 4057f245d62ab995bd55f46597a966e7bc38720c
         return(
             <div className="result-list">
                 <ul className="unorderedList">

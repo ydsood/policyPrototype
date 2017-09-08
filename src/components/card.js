@@ -11,13 +11,6 @@ class Card extends Component {
       policyNumber: props.title
     }
   }
-<<<<<<< HEAD
-  const valueList = props.items.filter(
-    (item) => {return !item.name.includes("ID")}
-  )
-  .map((item) => {
-=======
-
   handleSelect() {
     if (!this.state.isSearchResult) return;
 
@@ -38,7 +31,6 @@ class Card extends Component {
       );
     });
 
->>>>>>> 4057f245d62ab995bd55f46597a966e7bc38720c
     return (
       <div className = "card" onClick={ this.handleSelect.bind(this)}>
           <h4>{this.props.title}</h4>
