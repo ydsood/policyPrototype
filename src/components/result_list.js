@@ -64,7 +64,11 @@ class ResultList extends Component{
        else
              policyList = this.props.policies.map((item)=>{
                 //console.log(item);
-                return <SearchResult data={item} />
+                return (
+                    <NavItem title={item.policyNumber}>
+                       <SearchResult key={item.policyNumber} data={item} />
+                   </NavItem>
+            );
             });
         //console.log(policyList);
         return(
