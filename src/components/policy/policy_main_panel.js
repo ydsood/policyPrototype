@@ -45,8 +45,7 @@ const PolicyMainPanel = (props) =>{
     <div className = "policy-main-panel">
         <Row className="show-grid">
             <Col xs={6} md={4}><PolicyLeftPanel items={leftItems}/></Col>
-            <Col xs={12} md={8}><PolicyMiddlePanel data={middleData} /></Col>
-            
+            <Col xs={12} md={8}><PolicyMiddlePanel data={middleData} /></Col>    
         </Row>
     </div>
     )

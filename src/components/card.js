@@ -23,7 +23,7 @@ class Card extends Component {
       return (<div>Loading...</div>);
     }
     const valueList = this.props.items.filter(
-      (item) => { return !item.name.includes("ID")}
+      (item) => { return !item.name.includes("ID")&&!item.name.includes("Code")}
     )
     .map((item) => {
       return (

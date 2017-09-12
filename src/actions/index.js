@@ -3,7 +3,7 @@ import axios from 'axios';
 export const FETCH_POLICIES = 'fetch_policies';
 export const FETCH_POLICY = 'fetch_policy';
 
-const ROOT_URL = 'https://pd.dev.fasttechnology.com/PD1Dev1rs';
+const ROOT_URL = 'https://pd.dev.fasttechnology.com/PD1Dev2rs';
 const auth = {
     username: 'KCMiller',
     password: 'S123456'
