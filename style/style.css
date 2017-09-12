@@ -8,11 +8,12 @@
 }
 
 .left-panel{
-    border: 5px border-style solid;
+    border: 0px border-style solid;
     
 }
 .unorderdList{
-    list-style-type: none
+    list-style-type: none;
+    padding-left:0;
 }
 .searchbar {
     margin: auto;
